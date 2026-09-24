@@ -12,7 +12,6 @@ jobs:
 
     strategy:
       fail-fast: false
-      max-parallel: 2
       matrix:
         python-version: ["3.11", "3.10"]
 
@@ -28,9 +27,7 @@ jobs:
       - name: Show project files
         run: |
           pwd
-          echo "===== ARQUIVOS ====="
           ls -la
-          echo "===== ESTRUTURA ====="
           find . -maxdepth 3 -type f | sort
 
       - name: Install Dependencies
